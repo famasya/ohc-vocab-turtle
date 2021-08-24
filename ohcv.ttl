@@ -28,6 +28,12 @@ ohcVocab:chemical a rdf:property;
 ohcVocab:risk a rdfs:Class;
   rdfs:subClassOf schema:MedicalRiskFactor .
 
+ohcVocab:question a rdfs:Class;
+  rdfs:range schema:Text .
+
+ohcVocab:answer a rdfs:Class;
+  rdfs:range schema:Text .
+
 # ---------------------------------------------------
 # Risk factors
 riskFactor:low a ohcVocab:risk;
