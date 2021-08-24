@@ -1,7 +1,5 @@
-@prefix ohc: <https://gist.githubusercontent.com/famasya/9aef06bd38164ae1aa3140a97751d3a1/raw/a42ff594c544894cc78039fa19c838e3e1158441/ohcv.ttl#> .
-@prefix doctor: <https://gist.githubusercontent.com/famasya/9aef06bd38164ae1aa3140a97751d3a1/raw/a42ff594c544894cc78039fa19c838e3e1158441/ohcv.ttl#> .
-@prefix ohcVocab: <https://gist.githubusercontent.com/famasya/9aef06bd38164ae1aa3140a97751d3a1/raw/a42ff594c544894cc78039fa19c838e3e1158441/ohcv.ttl#> .
-@prefix riskFactor: <https://gist.githubusercontent.com/famasya/9aef06bd38164ae1aa3140a97751d3a1/raw/a42ff594c544894cc78039fa19c838e3e1158441/ohcv.ttl#> .
+@prefix ohcVocab: <https://raw.githubusercontent.com/famasya/ohc-vocab-turtle/main/ohcv.ttl#> .
+@prefix riskFactor: <https://raw.githubusercontent.com/famasya/ohc-vocab-turtle/main/ohcv.ttl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix dbo: <http://dbpedia.org/ontology/> .
@@ -29,3 +27,11 @@ ohcVocab:chemical a rdf:property;
 
 ohcVocab:risk a rdfs:Class;
   rdfs:subClassOf schema:MedicalRiskFactor .
+
+# ---------------------------------------------------
+# Risk factors
+riskFactor:low a ohcVocab:risk;
+  schema:name "Low risk" .
+
+riskFactor:high a ohcVocab:risk;
+  schema:name "High risk" .
