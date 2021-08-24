@@ -1,0 +1,31 @@
+@prefix ohc: <https://gist.githubusercontent.com/famasya/9aef06bd38164ae1aa3140a97751d3a1/raw/a42ff594c544894cc78039fa19c838e3e1158441/ohcv.ttl#> .
+@prefix doctor: <https://gist.githubusercontent.com/famasya/9aef06bd38164ae1aa3140a97751d3a1/raw/a42ff594c544894cc78039fa19c838e3e1158441/ohcv.ttl#> .
+@prefix ohcVocab: <https://gist.githubusercontent.com/famasya/9aef06bd38164ae1aa3140a97751d3a1/raw/a42ff594c544894cc78039fa19c838e3e1158441/ohcv.ttl#> .
+@prefix riskFactor: <https://gist.githubusercontent.com/famasya/9aef06bd38164ae1aa3140a97751d3a1/raw/a42ff594c544894cc78039fa19c838e3e1158441/ohcv.ttl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+
+ohcVocab:disease a rdfs:Class;
+  rdfs:subClassOf dbo:disease .
+
+ohcVocab:answeredBy a rdfs:Class;
+  rdfs:subClassOf schema:Person .
+
+ohcVocab:procedure a rdf:property;
+  rdfs:range dbr:Medical_procedure .
+
+ohcVocab:anatomy a rdf:property;
+  rdfs:range dbo:AnatomicalStructure .
+
+ohcVocab:disorder a rdf:property;
+  rdfs:range dbo:symptom, dbo:disease.
+
+ohcVocab:chemical a rdf:property;
+  rdfs:range dbo:ChemicalSubstance .
+
+ohcVocab:risk a rdfs:Class;
+  rdfs:subClassOf schema:MedicalRiskFactor .
